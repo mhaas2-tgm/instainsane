@@ -199,7 +199,7 @@ if [[ ! -d sessions ]]; then
 mkdir sessions
 fi
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 printf "user=\"%s\"\npass=\"%s\"\nwl_pass=\"%s\"\ntoken=\"%s\"\n" $user $pass $wl_pass $countpass > sessions/store.session.$user.$(date +"%FT%H%M")
 printf "\e[1;77mSession saved.\e[0m\n"
 printf "\e[1;92mUse ./instainsane.sh --resume\n"
@@ -224,7 +224,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -252,7 +252,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -281,7 +281,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -310,7 +310,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -337,7 +337,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -368,7 +368,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -399,7 +399,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -430,7 +430,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -463,7 +463,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
@@ -496,7 +496,7 @@ header='Connection: "close", "Accept": "*/*", "Content-type": "application/x-www
 data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 IFS=$'\n'
-countpass=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
+countpass=$(grep -F -n -x "$pass" "$wl_pass" | cut -d ":" -f1)
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 useragent='User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"'
 
